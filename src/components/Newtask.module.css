@@ -1,0 +1,32 @@
+.ipt{
+    color:var(--gray-100);
+    background-color: var(--gray-500);
+    height: 54px;
+    width: 638px;
+    border: solid 2px var(--gray-600);
+    border-radius: 8px;
+    text-indent: 20px;
+}
+
+.btn{
+    background-color: var(--blue-dark);
+    color: var(--gray-100);
+    border:none;
+    height: 52px;
+    width: 90px;
+    margin-left: 8px;
+    border-radius: 8px;
+}
+
+.img{
+    position: relative;
+    margin-left: 15px;
+    top:2px;
+}
+
+.content{
+    position: relative;
+    display: flex;
+    left: calc(50% - 736px/2);
+    top:-25px
+}
