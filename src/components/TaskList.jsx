@@ -1,7 +1,8 @@
 import style from './Tasklist.module.css'
 import clipIcon from '../assets/clipboard.png'
+import { Taskcreate } from './Taskcreate'
 
-export function TaskList() {
+export function TaskList(props) {
   return (
     <div className={style.content}>
       <header className={style.head}>
@@ -14,14 +15,16 @@ export function TaskList() {
           <span className={style.cont}>0</span>
         </div>        
       </header>
+      
       <div className={style.conteudo}>
         <img src={clipIcon} alt="clip" />
         <div className={style.text}>
           <p><strong>Você ainda não tem tarefas cadastradas</strong></p>
           <p>Crie tarefas e organize seus itens a fazer</p>
         </div>
-        
       </div>
+      
+      
     </div>
   )
 }
