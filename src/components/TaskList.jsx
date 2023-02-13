@@ -1,32 +1,27 @@
 import style from './Tasklist.module.css'
-import clipIcon from '../assets/clipboard.png'
 import { Taskcreate } from './Taskcreate'
+import { Taskvazio } from './Taskvazio'
 
 export function TaskList(props) {
+  const verificaLista = props.lista.item;
+  console.log(verificaLista)
   return (
     <div className={style.content}>
       <header className={style.head}>
-        <div className={style.headText}> 
+        <div className={style.headText}>
           <strong className={style.textCriado}>Taferas criadas</strong>
-          <span className={style.cont}>0</span>
+          <span className={style.cont}>{props.cont}</span>
         </div>
         <div className={style.headText}>
           <strong className={style.textConcluido}>Concluidas</strong>
           <span className={style.cont}>0</span>
-        </div>        
-      </header>
-      
-      <div className={style.conteudo}>
-        <img src={clipIcon} alt="clip" />
-        <div className={style.text}>
-          <p><strong>Você ainda não tem tarefas cadastradas</strong></p>
-          <p>Crie tarefas e organize seus itens a fazer</p>
         </div>
+      </header>
+      <div className={style.conteudo}>
+        { verificaLista ? '' : <Taskvazio/>}
+        {props.lista.map((item) => item ? <Taskcreate key={item} text={item}/> : '')}
       </div>
-      
-      
     </div>
   )
 }
 
- 

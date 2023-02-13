@@ -6,12 +6,9 @@ import lixo from '../assets/trash.png'
 export function Taskcreate (props){
   return (
     <div className={style.list}>
-      {props.itemsList.map((item, index) => (
-        <><img src={vector} />
-          <span className={style.text}
-            key={index}>{item}</span>
-          <img src={lixo} /></>
-      ))}
+      <img src={vector}/>
+      <span className={style.text}>{props.text}</span>
+      <img src={lixo}/>
     </div>
   )
 }

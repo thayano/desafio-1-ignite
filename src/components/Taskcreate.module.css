@@ -12,5 +12,7 @@
 
 .text{
     color:var(--gray-300);
-    text-decoration-line: line-through;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* text-decoration-line: line-through; */
 }

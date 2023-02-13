@@ -1,0 +1,9 @@
+.text{
+    margin-top: 25px;
+    color:var(--gray-300);
+    text-align: center;
+}
+
+.text img{
+    margin-bottom: 25px;
+}
